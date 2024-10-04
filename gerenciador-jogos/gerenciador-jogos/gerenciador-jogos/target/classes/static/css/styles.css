@@ -1,0 +1,101 @@
+/* src/main/resources/static/css/styles.css */
+
+body {
+    background-color: #f4f4f4; /* Um tom mais claro para suavizar o fundo */
+    font-family: 'Arial', sans-serif; /* Fonte mais limpa */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* Limitar a largura para um layout mais agradável */
+    margin: auto; /* Centralizar o container */
+    padding: 20px;
+}
+
+h1 {
+    color: #343a40;
+    font-size: 2.5rem; /* Aumentar o tamanho do título */
+    margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo */
+}
+
+h2 {
+    color: #495057; /* Título secundário com uma cor mais suave */
+    font-size: 2rem; /* Tamanho adequado para subtítulos */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+p {
+    color: #6c757d; /* Texto de parágrafo com cor suave */
+    line-height: 1.6; /* Melhorar a legibilidade */
+}
+
+.alert {
+    border-radius: 0.5rem; /* Cantos arredondados para alertas */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Aumentar o padding para um visual mais espaçado */
+    position: relative; /* Para melhor controle de layout */
+    bottom: 0; /* Fixar na parte inferior se necessário */
+    width: 100%; /* Cobrir toda a largura */
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a barra de navegação */
+}
+
+.nav-link {
+    transition: color 0.3s; /* Transição suave para links */
+}
+
+.nav-link:hover {
+    color: #28a745; /* Cor ao passar o mouse */
+}
+
+.btn {
+    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves para botões */
+}
+
+.btn-success {
+    background-color: #28a745; /* Verde mais vibrante */
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Escurecer ao passar o mouse */
+}
+
+.table {
+    border-radius: 0.5rem; /* Bordas arredondadas para tabelas */
+    overflow: hidden; /* Para aplicar bordas arredondadas corretamente */
+}
+
+.table th {
+    background-color: #343a40; /* Cor para cabeçalho da tabela */
+    color: white; /* Texto branco para contraste */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Linhas alternadas com fundo claro */
+}
+
+.modal-header {
+    background-color: #343a40; /* Cor para cabeçalho do modal */
+    color: white; /* Texto branco para contraste */
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d; /* Cor para o botão "Não" no modal */
+}
+
+.modal-footer .btn-danger {
+    background-color: #dc3545; /* Cor para o botão "Sim" no modal */
+}
+
+.modal-footer .btn-danger:hover {
+    background-color: #c82333; /* Escurecer ao passar o mouse */
+}

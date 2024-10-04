@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Jogos</title>
+  <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+  <link th:href="@{/css/pesquisa.css}" rel="stylesheet"/> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+<div layout:fragment="conteudo">
+<div class="container">
+  <h2>
+    Resultados da Pesquisa para:
+    <span th:text="${query != null && !query.isEmpty() ? query : 'Nenhum termo de pesquisa informado.'}">Nome do Jogo</span>
+  </h2>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Gênero</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop para exibir cada jogo encontrado -->
+    <tr th:each="jogo : ${jogos}">
+      <td th:text="${jogo.id}">ID</td>
+      <td th:text="${jogo.nome}">Nome</td>
+      <td th:text="${jogo.genero}">Gênero</td>
+      <td>
+        <a th:href="@{/jogo/editar/{id}(id=${jogo.id})}" class="btn btn-primary">Editar</a>
+        <form th:action="@{/jogo/remover}" method="post" style="display:inline;">
+          <input type="hidden" name="id" th:value="${jogo.id}">
+          <button type="submit" class="btn btn-danger">Remover</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Mensagem de retorno caso a lista esteja vazia -->
+  <div th:if="${jogos.isEmpty()}">
+    <p class="alert alert-info" th:text="${mensagem != null ? mensagem : 'Nenhum jogo encontrado para: ' + (query != null && !query.isEmpty() ? query : 'Nenhum termo de pesquisa informado.')}"></p>
+  </div>
+
+  <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
+</div>
+</div>
+</body>
+</html>

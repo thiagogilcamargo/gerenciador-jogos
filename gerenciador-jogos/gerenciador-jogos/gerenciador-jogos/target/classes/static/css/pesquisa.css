@@ -1,0 +1,106 @@
+/* listat.css */
+
+/* Estilos personalizados */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    margin: 0; /* Remover margens padrão */
+    padding: 0; /* Remover padding padrão */
+    display: flex; /* Usar Flexbox para layout */
+    flex-direction: column; /* Empilhar elementos verticalmente */
+    min-height: 100vh; /* Altura mínima de 100% da tela */
+}
+
+header, footer {
+    width: 100%; /* Garantir que ocupem a largura total */
+    text-align: center;
+    background-color: #343a40; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilo para o conteúdo principal */
+.main-content {
+    flex: 1; /* Permitir que o conteúdo principal ocupe o espaço restante */
+    padding: 20px; /* Espaçamento ao redor do corpo */
+    width: 100%; /* Garantir que o conteúdo ocupe toda a largura */
+    box-sizing: border-box; /* Incluir padding na largura total */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px; /* Espaçamento maior abaixo do título */
+    font-weight: bold;
+    color: #343a40; /* Cor do título */
+    font-size: 2.5em; /* Aumentar o tamanho do título */
+}
+
+table {
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Mesclar bordas para um visual mais limpo */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    margin-bottom: 40px; /* Espaçamento abaixo da tabela */
+    max-width: 100%; /* Garantir que a tabela não exceda a largura da tela */
+}
+
+thead {
+    background-color: #343a40; /* Fundo preto para o cabeçalho */
+    color: white;              /* Cor branca para o texto */
+}
+
+th, td {
+    padding: 15px;            /* Espaçamento interno nas células */
+    text-align: center;       /* Centralizar texto nas células */
+    vertical-align: middle;   /* Alinhar verticalmente no meio */
+    border: 1px solid #dee2e6; /* Borda clara nas células */
+}
+
+th {
+    font-weight: bold; /* Negrito para cabeçalhos */
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-header {
+    background-color: #343a40; /* Fundo do cabeçalho do modal */
+    color: white;              /* Texto branco no modal */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px; /* Reduzir o padding no conteúdo principal em telas menores */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduzir o tamanho do título em telas menores */
+    }
+
+    table {
+        margin-bottom: 20px; /* Reduzir o espaço abaixo da tabela */
+    }
+
+    th, td {
+        padding: 10px; /* Reduzir o padding nas células */
+    }
+}

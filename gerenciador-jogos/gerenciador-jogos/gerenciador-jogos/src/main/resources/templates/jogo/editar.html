@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Jogo</title>
+    <link th:href="@{/css/cadastro.css}" rel="stylesheet"/><!-- Link para o arquivo CSS -->
+</head>
+<body>
+<div layout:fragment="conteudo" class="container mt-5">
+    <h1>Editar Jogo</h1>
+    <form th:action="@{/jogo/editar}" th:object="${jogo}" method="post">
+        <input th:field="*{id}" type="hidden"/>
+
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input class="form-control" th:field="*{nome}" type="text" required placeholder="Digite o nome do jogo">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Gênero</label>
+            <input class="form-control" th:field="*{genero}" type="text" required placeholder="Digite o gênero do jogo">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Valor</label>
+            <input class="form-control" th:field="*{valor}" type="number" required placeholder="Digite o valor do jogo">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Descrição</label>
+            <textarea class="form-control" th:field="*{descricao}" rows="4" placeholder="Digite uma descrição para o jogo"></textarea>
+        </div>
+
+        <button class="btn btn-success" type="submit">Salvar</button>
+        <a th:href="@{/jogo/listar}" class="btn btn-secondary">Cancelar</a>
+    </form>
+
+    <div class="alert alert-info mt-3" th:if="${msg}" th:text="${msg}"></div>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

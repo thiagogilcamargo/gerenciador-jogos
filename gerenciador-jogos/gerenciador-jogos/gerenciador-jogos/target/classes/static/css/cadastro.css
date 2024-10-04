@@ -1,0 +1,78 @@
+/* cadastro.css */
+
+.form-container {
+    background: #ffffff;
+    border-radius: 15px; /* Borda arredondada para um visual suave */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra mais suave e definida */
+    padding: 40px; /* Ajustar espaço interno */
+    max-width: 600px; /* Largura máxima para responsividade */
+    margin: auto; /* Centralizar o formulário na página */
+}
+
+.form-title {
+    text-align: center;
+    color: #000000; /* Cor para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-weight: bold; /* Negrito para destaque */
+    font-size: 2.5em; /* Tamanho do título */
+}
+
+.form-label {
+    font-weight: 600; /* Ajustar para um visual mais moderno */
+    color: #495057; /* Cor dos rótulos */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+}
+
+.form-control {
+    border: 1px solid #ced4da; /* Borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    padding: 10px; /* Mais espaço interno nos campos */
+    font-size: 1em; /* Tamanho de fonte legível */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Cor da borda em foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Sombra em foco */
+    outline: none; /* Remover contorno padrão do navegador */
+}
+
+.btn-custom {
+    background: #28a745; /* Cor de fundo do botão */
+    border: none; /* Remover borda */
+    color: #ffffff; /* Cor do texto */
+    padding: 12px 40px; /* Padding ajustado para um botão mais largo */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1em; /* Tamanho de fonte um pouco maior */
+    font-weight: 600; /* Texto mais encorpado para destaque */
+    text-align: center; /* Centralizar texto no botão */
+    text-transform: uppercase; /* Transformar texto para maiúsculas */
+    transition: background 0.3s ease, transform 0.2s ease; /* Transição para mudanças visuais */
+    cursor: pointer; /* Cursor de ponteiro para indicar botão */
+}
+
+
+.btn-custom:hover {
+    background: #0056b3; /* Cor do botão ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação mais suave */
+}
+
+.alert {
+    margin-bottom: 20px; /* Espaçamento abaixo do alerta */
+    padding: 10px; /* Padding para melhor visualização */
+    border-radius: 5px; /* Borda arredondada para o alerta */
+}
+
+.alert-success {
+    background-color: #d4edda; /* Cor de fundo para alerta de sucesso */
+    color: #155724; /* Cor do texto para alerta de sucesso */
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Cor de fundo para alerta de erro */
+    color: #721c24; /* Cor do texto para alerta de erro */
+}
+
+.d-grid {
+    margin-top: 30px; /* Mais espaço entre os botões */
+}

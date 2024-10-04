@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogo</title>
+    <link th:href="@{/css/cadastro.css}" rel="stylesheet"/>
+    <!-- Link para o arquivo CSS -->
+</head>
+<body>
+<div layout:fragment="conteudo" class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="form-container">
+                <h1 class="form-title">Cadastro de Jogo</h1>
+
+                <div class="alert alert-success" th:if="!${#strings.isEmpty(mensagem)}" th:text="${mensagem}"></div>
+
+                <form th:action="@{/jogo/cadastrar}" th:object="${jogo}" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Nome</label>
+                        <input type="text" th:field="*{nome}" class="form-control" required placeholder="Digite o nome do jogo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gênero</label>
+                        <input type="text" th:field="*{genero}" class="form-control" required placeholder="Digite o gênero do jogo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Valor (R$)</label>
+                        <input type="number" th:field="*{valor}" class="form-control" required placeholder="Digite o valor do jogo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Descrição</label>
+                        <textarea class="form-control" th:field="*{descricao}" rows="4" placeholder="Digite uma descrição para o jogo"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Data de Lançamento</label>
+                        <input type="date" th:field="*{dataLancamento}" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Plataforma</label>
+                        <input type="text" th:field="*{plataforma}" class="form-control" placeholder="Digite a plataforma">
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-custom" type="submit">Cadastrar</button>
+                        <a th:href="@{/jogo/listar}" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

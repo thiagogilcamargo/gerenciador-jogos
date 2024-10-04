@@ -1,0 +1,17 @@
+/* index.css */
+
+.hero {
+    background-color: #343a40;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+.card {
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
