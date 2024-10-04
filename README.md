@@ -55,7 +55,7 @@ Este projeto é uma aplicação web para o cadastro e gerenciamento de jogos. El
 5. **Acesse a aplicação no navegador:**
 
     ```
-    http://localhost:8080/jogo/listar
+    http://localhost:8080
     ```
 
 ## 🗄️ Endpoints da Aplicação
