@@ -7,7 +7,7 @@ Este projeto é uma aplicação web para o cadastro e gerenciamento de jogos. El
 
 ## 👥 Contribuidores
 
-- **Thiago Gil Camargo** - RM 551211
+- **Thiago Gil Camargo** - RM 551211- turma 2TDSPV
   
 
 ## 📋 Funcionalidades
