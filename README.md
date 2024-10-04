@@ -2,6 +2,9 @@
 
 Este projeto é uma aplicação web para o cadastro e gerenciamento de jogos. Ele permite adicionar informações como nome, gênero, valor, descrição, data de lançamento e plataforma dos jogos. A aplicação foi desenvolvida utilizando Spring Boot com integração ao Thymeleaf para a parte de front-end e segue uma estrutura organizada para facilitar a manutenção e o crescimento do sistema.
 
+## 👥 Contribuidores
+
+- **Thiago Gil Camargo** - RM 551211
 ## 📋 Funcionalidades
 
 - **Cadastro de Jogos**: Preencha um formulário para cadastrar um novo jogo no sistema.
@@ -88,9 +91,7 @@ A aplicação possui os seguintes endpoints:
 
 
 
-## 👥 Contribuidores
 
-- **Thiago Gil Camargo**
 
 ## 📄 Licença
 
